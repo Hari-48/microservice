@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "88087177-69e3-40a2-b20f-d72cac2f422a",
+		"name": "Quiz  - Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26389336"
+	},
+	"item": [
+		{
+			"name": "Create a Quiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"test 1\",\n    \"category\": \"java\",\n    \"noOfQuestions\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7002/quiz/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7002",
+					"path": [
+						"quiz",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Quiz Question",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7002/quiz/getQues/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7002",
+					"path": [
+						"quiz",
+						"getQues",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": 4,\n        \"response\": \"external\"\n    },\n    {\n        \"id\": 11,\n        \"response\": \"ArithmeticException\"\n    },\n    {\n        \"id\": 14,\n        \"response\": \"Use of Pointers\"\n    },\n    {\n        \"id\": 44,\n        \"response\": \"String\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7002/quiz/submit/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7002",
+					"path": [
+						"quiz",
+						"submit",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

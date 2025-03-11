@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "8d1ccef5-81d4-4c7f-9149-d793006f55b0",
+		"name": "Question-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26389336"
+	},
+	"item": [
+		{
+			"name": "Get All Question ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/question/allQuestion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"question",
+						"allQuestion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get question by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/question/getQuestionsById?questionsIds=1,3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"question",
+						"getQuestionsById"
+					],
+					"query": [
+						{
+							"key": "questionsIds",
+							"value": "1,3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save the new question ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[ {\n        \n        \"questionTitle\": \"which keyword is used to create a subclass in java?\",\n        \"option1\": \"implements\",\n        \"option2\": \"extends\",\n        \"option3\": \"interface\",\n        \"option4\": \"key\",\n        \"rightAnswer\": \"extends\",\n        \"difficultyLevel\": \"easy\",\n        \"category\": \"java\"\n    }]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/question/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"question",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get the question by Question catgeory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/question/category/java",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"question",
+						"category",
+						"java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Random question by category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/question/generate?category=java&noOfQuestions=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"question",
+						"generate"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "java"
+						},
+						{
+							"key": "noOfQuestions",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
