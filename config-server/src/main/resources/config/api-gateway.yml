@@ -16,7 +16,17 @@ spring :
           uri: lb://DEPARTMENT-SERVICE
           predicates:
             - Path=/department/**
+
         - id: EMPLOYEE-SERVICE
           uri: lb://EMPLOYEE-SERVICE
           predicates:
             - Path=/employee/**
+
+        - id: QUESTION-SERVICE
+          uri: lb://QUESTION-SERVICE
+          predicates:
+            - Path=/question/**
+        - id: QUIZ-SERVICE
+          uri: lb://QUIZ-SERVICE
+          predicates:
+            - Path=/quiz/**
